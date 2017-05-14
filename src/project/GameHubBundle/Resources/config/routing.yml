@@ -1,0 +1,39 @@
+project_game_hub_homepage:
+    path:     /ts/{id}
+    defaults: { _controller: projectGameHubBundle:Default:index }
+
+affichagem:
+    path:     /p1
+    defaults: { _controller: projectGameHubBundle:Default:test }
+
+affichagempro:
+    path:     /p2
+    defaults: { _controller: projectGameHubBundle:Default:testpro }
+
+ajout:
+    path:     /ajout
+    defaults: { _controller: projectGameHubBundle:Evenement:ajout }
+
+list:
+    path:     /list
+    defaults: { _controller: projectGameHubBundle:Evenement:list }
+
+SupprimerEvent:
+    path:     /suppModele/{id}
+    defaults: { _controller: projectGameHubBundle:Evenement:supprimer }
+
+ModifierEvent:
+    path:     /modifier/{id}
+    defaults: { _controller: projectGameHubBundle:Evenement:modifier }
+
+frontlist:
+    path:     /flist
+    defaults: { _controller: projectGameHubBundle:Evenement:frontlist }
+
+searchEvent:
+    path:     /rechercher/
+    defaults: { _controller: EspritParcBundle:Modele:recherche }
+
+my_map_homepage:
+    path:     /map
+    defaults: { _controller: projectGameHubBundle:Default:map }

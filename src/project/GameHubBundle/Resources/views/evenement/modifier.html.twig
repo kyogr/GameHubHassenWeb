@@ -1,0 +1,83 @@
+
+{#1{{ form_widget(form.nom) }}<br>#}
+{#2{{ form_widget(form.genre) }}<br>#}
+{#3{{ form_widget(form.note) }}<br>#}
+{#4{{ form_widget(form.description) }}<br>#}
+{#5{{ form_widget(form.dateSortie) }}<br>#}
+{#6{{ form_widget(form.classification) }}<br>#}
+{#7{{ form_widget(form.mode) }}<br>#}
+{#8{{ form_widget(form.prix) }}<br>#}
+{#8{{ form_widget(form.affiche) }}<br>#}
+{#8{{ form_widget(form.trailer) }}<br>#}
+
+{#9{{ form_widget(form.ajouter) }}#}
+
+{#{{ form_end((form)) }}#}
+{% extends "projectGameHubBundle::Layout2.html.twig" %}
+{% block fos_user_content %}
+
+
+
+    <!-- start: REGISTER BOX -->
+    <div class="box-register">
+        {{ form_start(form) }}
+
+        <fieldset>
+            <legend>
+                Modifier un événement
+            </legend>
+            <div class="row">
+                <p>
+                    Modifier les iformations suivantes
+                </p>
+                <div class="col-md-6">
+                    <div>Titre</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.object) }}
+
+                    </div>
+                    <div>Description</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.description) }}
+
+                    </div>
+                    <div>date</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.date) }}
+
+                    </div>
+                    <div>adresse</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.adresse) }}
+
+                    </div>
+                    <div>path</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.path) }}
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div>
+                <input type="submit" class="btn btn-primary pull-left" value="Modifier" />
+            </div>
+        </fieldset>
+
+        {{ form_end(form) }}
+        <!-- start: COPYRIGHT -->
+        <div class="copyright">
+            &copy; <span class="current-year"></span><span class="text-bold"> GameHub</span>. <span>All rights reserved</span>
+        </div>
+        <!-- end: COPYRIGHT -->
+    </div>
+    <!-- end: REGISTER BOX -->
+{% endblock fos_user_content %}

@@ -1,0 +1,107 @@
+{% extends "projectGameHubBundle::Layout2.html.twig" %}
+
+
+
+{% block fos_user_content %}
+    <H1>Ajouter un événement</H1>
+
+
+
+    <!-- start: REGISTER BOX -->
+    <div class="box-register">
+        {{ form_start(form) }}
+
+        <fieldset>
+            <legend>
+                Ajouter événement
+            </legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>Titre</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.object) }}
+
+                    </div>
+                    <div>Description</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.description) }}
+
+                    </div>
+                    <div>Date</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.date) }}
+
+                    </div>
+                    <div>adresse</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.adresse) }}
+
+                    </div>
+                    <div>path</div>
+                    <div class="form-group">
+
+                        {{ form_widget(form.path) }}
+
+                    </div>
+                </div>
+                {#<div class="col-md-6">#}
+                    {#<div>Classification</div>#}
+                    {#<div class="form-group">#}
+
+                        {#{{ form_widget(form.classification) }}#}
+
+                    {#</div>#}
+                    {#<div>Mode</div>#}
+                    {#<div class="form-group">#}
+
+                        {#{{ form_widget(form.mode) }}#}
+
+                    {#</div>#}
+                    {#<div>Prix</div>#}
+                    {#<div class="form-group">#}
+
+                        {#{{ form_widget(form.prix) }}#}
+
+                    {#</div>#}
+                    {#<div>Affiche</div>#}
+                    {#<div class="form-group">#}
+
+                        {#{{ form_widget(form.affiche) }}#}
+
+                    {#</div>#}
+                    {#<div>Trailer</div>#}
+                    {#<div class="form-group">#}
+
+                        {#{{ form_widget(form.trailer) }}#}
+
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="form-group">#}
+
+                {#{{ form_widget(form.ajouter)|title }}#}
+
+                {#</div>#}
+
+
+            </div>
+            <div>
+                <input type="submit" align="left"  class="btn btn-primary pull-left" value="Ajouter" />
+            </div>
+        </fieldset>
+
+        {{ form_end(form) }}
+        <!-- start: COPYRIGHT -->
+        <div class="copyright">
+            &copy; <span class="current-year"></span><span class="text-bold"> GameHub</span>. <span>All rights reserved</span>
+        </div>
+        <!-- end: COPYRIGHT -->
+    </div>
+    <!-- end: REGISTER BOX -->
+
+
+{% endblock fos_user_content %}
+

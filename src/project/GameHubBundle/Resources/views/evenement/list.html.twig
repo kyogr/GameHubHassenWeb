@@ -1,0 +1,137 @@
+{% extends "@projectGameHub/Layout.html.twig" %}
+
+
+{% block content %}
+
+
+
+    {#<div id="main-box" >#}
+    <form method="post">
+        <input type="date" name="date">
+
+        <input type="submit" value="Search "> </a>
+    </form>
+    <BR>
+
+        <div id="main-box" >
+
+
+            <h2 style="padding-top: 20px"> <span>
+
+            Liste des Evenements
+
+                    </span></h2> <br> <br>
+
+            <div class="content-padding">
+
+
+                {% for e in evt %}
+
+                    <div class="article-promo">
+                        <div class="article-photo">
+									<span class="article-image-out">
+										{#<span class="image-comments"><span>{{ j.classification }}</span>#}
+                                        </span>
+
+										<span class="article-image">
+											<span class="nth1 strike-tooltip" title="Afficher details">
+											{#Affiche	<a href="{{ path('JeuDetailFO',{'id':e.object}) }}"><i class="fa fa-eye"></i></a>#}
+											</span>
+											{#<a href="{{ path('JeuDetailFO',{'id':j.idJeux}) }}">#}
+                                              <img src="{{ asset('uploads/paths/' ~ e.path) }}" alt="" title="" width="300" height="200">
+                                            {#</a>#}
+										</span>
+									</span>
+                        </div>
+
+                        <div class="article-content">
+                            <h3>{{ e.object }}</h3>
+                            <div class="article-icons">
+                                <p class="user-tooltip"><i class="fa fa-fire"></i> <b> <a href="{{ path('my_map_homepage',{'id':e.idEvenement}) }}">Adresse </a> </b>{{ e.adresse }} </p>
+                                <p><i class="fa fa-calendar"></i><b> Date  </b>{{ e.date|date('Y-m-d') }}</p>
+                            </div>
+                            <h5>Description</h5>
+                            <p>{{ e.description }}</p>
+                            {#<a href="{{ path('JeuDetailFO',{'id':e.idJeux}) }}" class="defbutton"><i class="fa fa-reply"></i>Detail</a>#}
+                        </div>
+                    </div>
+
+                    <div class="clear-float do-the-split"></div>
+
+                {% endfor %}
+            </div>
+
+        </div>
+        {#<div id="sidebar" style="min-height: 750px;">#}
+        {#</div>#}
+
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#{% extends "projectGameHubBundle::Layout.html.twig " %}#}
+
+{#{% block fos_user_content %}#}
+    {#{{ include('@FOSUser/Security/login_content.html.twig') }}#}
+{#{% endblock fos_user_content %}#}
+
+{#{% block content %}#}
+
+    {#<h2 class="left">Liste des événements</h2>#}
+    {#<div class="clear-float do-the-split"></div>#}
+    {#{% for e in evt %}#}
+  {#{% block content %}#}
+
+      {#{% endblock %}#}
+
+    {#{% endfor %}#}
+
+
+{#{% endblock %}#}
+
+
+{#<!-- BEGIN .item -->#}
+{#<div class="item">#}
+    {#<div class="item-head">#}
+        {#<a href="events-single.html" class="event-icon"><strong> </strong><span>{{ e.date|date('d/m/Y') }}</span></a>#}
+    {#</div>#}
+    {#<div class="item-top">#}
+        {#<h3><a href="events-single.html">{{ e.object}}</a></h3>#}
+        {#<strong class="post-a"><i class="fa fa-clock-o"></i><strong>12:00</strong></strong>#}
+        {#<span class="post-a"><i class="fa fa-map-marker"></i>{{ e.adresse}}</span>#}
+
+    {#</div>#}
+    {#<div class="item-bottom">#}
+        {#<p>{{ e.description }}</p>#}
+        {#<a href="events-single.html" class="button invert">voir plus de détaille</a>#}
+    {#</div>#}
+    {#<!-- END .item -->#}
+{#</div>#}
+{#<div class="clear-float do-the-split"></div>#}
